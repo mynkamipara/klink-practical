@@ -10,6 +10,8 @@ This is a demo project built with Next.js and Redis and CoinGecko API to populat
 ### Introduction
 This project serves as information about crypto currencies and these data fetch from the CoinGecko API to show on different UI components. CoinGecko return Cache data frequently, So data store in our redis cache memory and load on local API call. Integrated dynamic Charts for specific interval data showing on chart.
 
+- Node version is `v21.7.1`
+
 ### Features
 **Next.js Integration**: The project is built using Next.js, a popular React framework for building server-rendered applications.
 
@@ -53,6 +55,21 @@ npm run dev
 
 ### Main page
 > http://localhost:3000
+
+### Facing Issues
+ - Some time getting error of CoinGecko api call to reached limit, So just wait and refresh page again so it will get infromation whatever api response is not store in cache memory.
+   
+### Information
+ - Chart API cache update on every 30, 1800, 43200 sec
+ - Coin List API cache update on every 45 sec
+ - Price API cache update on every 60 sec
+ - top trending API cache update on every 600 sec
+
+
+### Screenshots
+![screenshot1](./public/screenshots/img1.png)
+![screenshot2](./public/screenshots/img2.png)
+![screenshot3](./public/screenshots/img3.gif)
 
 [1]: https://react-chartjs-2.js.org/
 [2]: https://next.mui.com/material-ui/getting-started/
